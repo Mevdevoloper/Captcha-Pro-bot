@@ -18,8 +18,9 @@ from helper.captcha_maker import number_, emoji_
 app = Client(Config.SESSION_NAME, api_id=Config.APP_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
 # Local database for saving user info
 LocalDB = {}
-ch_markup = InlineKeyboardMarkup([[InlineKeyboardButton(text="Updates Channel", url="https://t.me/Universal_Projects"),
-                                    InlineKeyboardButton(text="Support Group", url="https://t.me/JV_Community")]])
+ch_markup = InlineKeyboardMarkup([[InlineKeyboardButton(text="Updates Channel", url="https://t.me/CodeMasterTG"),
+                                    InlineKeyboardButton(text="Support Group", url="https://t.me/+4KDIm0IQ_NQ0NDdl
+")]])
 
 
 @app.on_chat_member_updated()
@@ -73,7 +74,7 @@ async def check_chat_captcha(client, message):
         return
     await client.send_message(chat_id,
                               text=f"{message.from_user.mention} to chat here please verify that your a human",
-                              reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Verify Now", callback_data=f"verify_{chat_id}_{user_id}")]]))
+                              reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Verify Now ✔︎", callback_data=f"verify_{chat_id}_{user_id}")]]))
         
 
 @app.on_message(filters.command(["captcha"]) & ~filters.private)
