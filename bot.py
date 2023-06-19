@@ -19,8 +19,7 @@ app = Client(Config.SESSION_NAME, api_id=Config.APP_ID, api_hash=Config.API_HASH
 # Local database for saving user info
 LocalDB = {}
 ch_markup = InlineKeyboardMarkup([[InlineKeyboardButton(text="Updates Channel", url="https://t.me/CodeMasterTG"),
-                                    InlineKeyboardButton(text="Support Group", url="https://t.me/+4KDIm0IQ_NQ0NDdl
-")]])
+                                    InlineKeyboardButton(text="Support Group", url="https://t.me/+4KDIm0IQ_NQ0NDdl")]])
 
 
 @app.on_chat_member_updated()
